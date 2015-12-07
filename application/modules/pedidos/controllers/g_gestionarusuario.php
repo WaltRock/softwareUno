@@ -11,7 +11,7 @@ class G_GestionarUsuario extends MX_Controller {
     
     public function index() {
         $data = $this->E_sexo->listar();
-        var_dump($data);
+        var_dump($data);//prueba de git
         exit;
         $this->load->library('session');
         $this->session->set_userdata("nombre", "xxxxxxxxxxxx");
