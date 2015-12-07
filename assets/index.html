@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+
+<head lang='en' dir="rtl">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material Admin</title>
+
+    <!-- Vendor CSS -->
+    <link href="css/bootstrap-select.css" rel="stylesheet">
+    <link href="css/fullcalendar.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/sweet-alert.css" rel="stylesheet">
+    <link href="css/material-design-iconic-font.min.css" rel="stylesheet">        
+
+
+    <!-- CSS -->
+    <link href="css/app.min.1.css" rel="stylesheet">
+    <link href="css/app.min.2.css" rel="stylesheet">
+    <link href="css/sieweb_icon.css" rel="stylesheet">
+    <link href="css/please-wait.css" rel="stylesheet">
+    <link href="css/loader-mixins.css" rel="stylesheet">
+    <link href="css/sieslider.tema.css" rel="stylesheet">
+    <link href="css/sieslider.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <ul class="header-inner">
+            <li id="menu-trigger" data-trigger="#sidebar" class="open">
+                <div class="line-wrap">
+                    <div class="line top"></div>
+                    <div class="line center"></div>
+                    <div class="line bottom"></div>
+                </div>
+            </li>
+            <li class="logo visible-xs">
+                <a href="index.html"><img src="img/escudo.png" class="img-responsive animated fadeInLeft"></a>
+            </li>
+            <li class="logo hidden-xs">
+                <a href="index.html"><img src="img/banner-blanco.png" class="img-responsive animated fadeInLeft"></a>
+            </li>
+
+            <li class="pull-right">
+                <ul class="actions actions-alt">
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" href="#"><i class="zmdi zmdi-translate"></i></a>
+                        <div class="dropdown-menu pull-right">
+                            <div class="listview">
+                                <div class="lv-header">
+                                    Lenguajes
+                                </div>
+                                <div class="lv-body m-l-20">
+                                    <label class="checkbox">
+                                        <input type="radio" name="lenguaje" value="es_PE" checked="true" id="es_PE" class="radio_material">
+                                        <label for="es_PE">Español</label>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="radio" name="lenguaje" value="en_US" id="en_US" class="radio_material">
+                                        <label for="en_US">Inglés</label>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="lenguaje" value="fr_FR" id="fr_FR" class="radio_material">
+                                        <label for="fr_FR">Francés</label>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" href="#"><i class='zmdi zmdi-email'></i><i class="tmn-counts">6</i></a>
+                        <div class="dropdown-menu dropdown-menu-lg pull-right">
+                            <div class="listview">
+                                <div class="lv-header">
+                                    Mensajes
+                                </div>
+                                <div class="lv-body">
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/1.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">David Belle</div>
+                                                <small class="lv-small">Cum sociis natoque penatibus et magnis dis parturient montes</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/2.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Jonathan Morris</div>
+                                                <small class="lv-small">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/3.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Fredric Mitchell Jr.</div>
+                                                <small class="lv-small">Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/4.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Glenn Jecobs</div>
+                                                <small class="lv-small">Ut vitae lacus sem ellentesque maximus, nunc sit amet varius dignissim, dui est consectetur neque</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/4.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Bill Phillips</div>
+                                                <small class="lv-small">Proin laoreet commodo eros id faucibus. Donec ligula quam, imperdiet vel ante placerat</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <a class="lv-footer" href="#">Ver Todos</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" href="#"><i class='zmdi zmdi-more-vert'></i></a>
+                        <ul class="dropdown-menu dm-icon pull-right">
+                            <li class="hidden-xs">
+                                <a data-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Toggle Fullscreen</a>
+                            </li>
+                            <li>
+                                <a data-action="clear-localstorage" href="#"><i class="zmdi zmdi-delete"></i> Clear Local Storage</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="zmdi zmdi-face"></i> Privacy Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="zmdi zmdi-settings"></i> Other Settings</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hidden-xs" id="chat-trigger" data-trigger="#chat">
+                        <a href="#"><i class='zmdi zmdi-comments'></i></a>
+                    </li>
+                </ul>
+                </header>
+
+                <section id="main">
+                    <aside id="sidebar" class="toggled">
+                        <div class="sidebar-inner c-overflow">
+                            <div class="profile-menu">
+                                <a href="#">
+                                    <div class="profile-pic">
+                                        <img src="img/admin-full.png" alt="" class="center-block" data-trigger="hover" data-toggle="popover" data-placement="right" data-original-title="Código:" data-content="SIE" title="">
+                                    </div>
+
+                                    <div class="profile-info">
+                                        Administrador del Sistema: SIE*
+                                        <i class="zmdi zmdi-chevron-down"></i>
+                                    </div>
+                                </a>
+
+                                <ul class="main-menu">
+                                    <li>
+                                        <a href="profile-about.html"><i class="zmdi zmdi-account"></i> Ver Perfil</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-input-antenna"></i> Configuración de Privacidad</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-settings"></i> Ajustes</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-time-restore"></i> Salir</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <ul class="main-menu siemenu">
+                                <li class="active"><a href="index-2.html"><i class="zmdi zmdi-home"></i><span data-i18n="inicio"></span></a></li>
+                                <li class="sub-menu">
+                                    <a href="#"><i class="sie sieicon-graduate21"></i><span data-i18n="datosaca"></span></a>
+                                    <ul>
+                                        <li><a href="#" data-i18n="datosaca.1"> Mis Datos</a></li>
+                                        <li><a href="#" data-i18n="datosaca.2"> Datos de la familia</a></li>
+                                        <li><a href="#" data-i18n="datosaca.3"> Datos del Alumno</a></li>
+                                        <li><a href="#" data-i18n="datosaca.4"> Atención Médica del Alumno</a></li>
+                                        <li><a href="#" data-i18n="datosaca.5"> Alumnos por Salón</a></li>
+                                        <li><a href="#" data-i18n="datosaca.6"> Calificaciones</a></li>
+                                        <li><a href="#" data-i18n="datosaca.7"> Cursos</a></li>
+                                        <li><a href="#" data-i18n="datosaca.8"> Actividades</a></li>
+                                        <li><a href="#" data-i18n="datosaca.9"> Material Didáctico</a></li>
+                                        <li><a href="#" data-i18n="datosaca.10"> Enlaces de Interés</a></li>
+                                        <li><a href="#" data-i18n="datosaca.11"> Sílabus</a></li>
+                                        <li><a href="#" data-i18n="datosaca.12"> Asigna Horas por Grado</a></li>
+                                        <li><a href="#" data-i18n="datosaca.13"> Asigna Horario de Clases</a></li>
+                                        <li><a href="#" data-i18n="datosaca.14"> Horario de Clase</a></li>
+                                        <li><a href="#" data-i18n="datosaca.15"> Horario de Atención</a></li>
+                                        <li><a href="#" data-i18n="datosaca.16"> Matrícula</a></li>
+                                        <li><a href="#" data-i18n="datosaca.17"> Exoneraciones de Matrícula</a></li>
+                                        <li><a href="#" data-i18n="datosaca.18"> Encuestas</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sub-menu">
+                                    <a href="#"><i class="sie sieicon-online26"></i><span data-i18n="recursos"></span></a>
+                                    <ul>
+                                        <li><a href="#" data-i18n="recursos.1"> Documentos de Matrícula</a></li>
+                                        <li><a href="#" data-i18n="recursos.2"> Mi Agenda</a></li>
+                                        <li><a href="#" data-i18n="recursos.3"> Mis Mensajes</a></li>
+                                        <li><a href="cronograma_actividades.html" data-i18n="recursos.4"> Cronograma de Actividades</a></li>
+                                        <li><a href="#" data-i18n="recursos.5"> Circulares</a></li>
+                                        <li><a href="#" data-i18n="recursos.6"> Galería de Imágenes</a></li>
+                                        <li><a href="#" data-i18n="recursos.7"> Envío de Información por Correo Electrónico</a></li>
+                                        <li><a href="#" data-i18n="recursos.8"> Comedor</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sub-menu">
+                                    <a href="#"><i class="sie sieicon-education14"></i><span data-i18n="reportes"></span></a>
+
+                                    <ul>
+                                        <li><a href="#" data-i18n="reportes.1"> Reporte de Actividades por Profesor</a></li>
+                                        <li><a href="#" data-i18n="reportes.2"> Reporte de Alumnos Matriculados por Internet</a></li>
+                                        <li><a href="#" data-i18n="reportes.3"> Reporte de Accesos a Intranet</a></li>
+                                        <li><a href="#" data-i18n="reportes.4"> Ranking de Acceso a Intranet</a></li>
+                                        <li><a href="#" data-i18n="reportes.5"> Cartas de Ingreso a la Intranet</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sub-menu">
+                                    <a href="#"><i class="sie sieicon-paper101"></i><span data-i18n="pensiones"></span></a>
+
+                                    <ul>
+                                        <li><a href="#" data-i18n="pensiones.uno"> Por Documentos de Pago</a></li>
+                                        <li><a href="#" data-i18n="pensiones.dos"> Por Saldos</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sub-menu">
+                                    <a href="#"><i class="zmdi zmdi-shield-security"></i><span data-i18n="seguridad"></span></a>
+                                    <ul>
+                                        <li><a href="#" data-i18n="seguridad.1"> Configuración de Usuarios</a></li>
+                                        <li><a href="#" data-i18n="seguridad.2"> Configuración de Perfiles</a></li>
+                                        <li><a href="#" data-i18n="seguridad.3"> Usuarios en el Sistema</a></li>
+                                        <li><a href="#" data-i18n="seguridad.4"> Cambio de Clave</a></li>
+                                        <li><a href="#" data-i18n="seguridad.5"> Parámetros</a></li>
+                                        <li><a href="#" data-i18n="seguridad.6"> Parámetros de Matrícula</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <section id="content">
+                        <div class="block-header">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2 class="m-t-10">
+                                        <a href="index.html">Inicio</a>
+                                    </h2>
+                                </div>
+                                <div class="pull-right">
+                                    <ul class="actions">
+                                        <li class="dropdown">
+                                            <a data-toggle="dropdown" href=""><i class="icontext">Módulo</i></a>
+                                            <div class="dropdown-menu pull-right">
+                                                <div class="listview">
+                                                    <div class="lv-header">Módulos Disponibles</div>
+                                                    <div class="lv-body m-l-10">
+                                                        <label class="checkbox">
+                                                            <input type="radio" class="radio_material" id="modulo1" value="modulo1" name="modulo">
+                                                            <label for="modulo1">Académico</label>
+                                                        </label>
+                                                        <label class="checkbox">
+                                                            <input type="radio" class="radio_material" id="modulo2" value="modulo2" name="modulo">
+                                                            <label for="modulo2">Biblioteca</label>
+                                                        </label>
+                                                        <label class="checkbox">
+                                                            <input type="radio" class="radio_material" id="modulo3" value="modulo3" name="modulo" checked="true">
+                                                            <label for="modulo3">Intranet</label>
+                                                        </label>
+                                                        <label class="checkbox">
+                                                            <input type="radio" class="radio_material" id="modulo4" value="modulo4" name="modulo">
+                                                            <label for="modulo4">Médico</label>
+                                                        </label>
+                                                        <label class="checkbox">
+                                                            <input type="radio" class="radio_material" id="modulo5" value="modulo5" name="modulo">
+                                                            <label for="modulo5">Pensiones</label>
+                                                        </label>
+                                                        <label class="checkbox">
+                                                            <input type="radio" class="radio_material" id="modulo6" value="modulo6" name="modulo">
+                                                            <label for="modulo6">Postulante</label>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a data-toggle="dropdown" href=""><i class="icontext">Año</i></a>
+                                            <div class="dropdown-menu pull-right">
+                                                <div class="listview">
+                                                    <div class="lv-header">Año Académico</div>
+                                                    <div class="lv-body m-l-10">
+                                                        <label class="checkbox">
+                                                            <input type="radio" class="radio_material" id="anio1" value="anio1" name="anio">
+                                                            <label for="anio1">2010</label>
+                                                        </label>
+                                                        <label class="checkbox">
+                                                            <input type="radio" class="radio_material" id="anio2" value="anio2" name="anio">
+                                                            <label for="anio2">2011</label>
+                                                        </label>
+                                                        <label class="checkbox">
+                                                            <input type="radio" class="radio_material" id="anio3" value="anio3" name="anio" checked="true">
+                                                            <label for="anio3">2012</label>
+                                                        </label>
+                                                        <label class="checkbox">
+                                                            <input type="radio" class="radio_material" id="anio4" value="anio4" name="anio">
+                                                            <label for="anio4">2013</label>
+                                                        </label>
+                                                        <label class="checkbox">
+                                                            <input type="radio" class="radio_material" id="anio5" value="anio5" name="anio">
+                                                            <label for="anio5">2014</label>
+                                                        </label>
+                                                        <label class="checkbox">
+                                                            <input type="radio" class="radio_material" id="anio6" value="anio6" name="anio">
+                                                            <label for="anio6">2015</label>
+                                                        </label>
+                                                        <label class="checkbox">
+                                                            <input type="radio" class="radio_material" id="anio7" value="anio7" name="anio">
+                                                            <label for="anio7">2016</label>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class='card'>
+                                        <div class='card-header ch-alt'>
+                                            <div>Circulares</div>
+                                        </div>
+                                        <div class='card-body'>
+                                            <div class="sieslider items-3 autoplay listview">
+                                                <div id="item-1" class="control-operator"></div>
+                                                <div id="item-2" class="control-operator"></div>
+                                                <div id="item-3" class="control-operator"></div>
+
+                                                <figure class="item lv-item">
+                                                    <div class="media">
+                                                        <div class="media-body">
+                                                            <div class="lv-title">Notificacion 1</div>
+                                                            <small class="lv-small">Uno</small>
+                                                        </div>
+                                                    </div>
+                                                </figure>
+
+                                                <figure class="item lv-item">
+                                                    <div class="media">
+                                                        <div class="media-body">
+                                                            <div class="lv-title">PANTA SALGUERO, Josué</div>
+                                                            <small class="lv-small">Dos</small>
+                                                        </div>
+                                                    </div>
+                                                </figure>
+
+                                                <figure class="item lv-item">
+                                                    <div class="media">
+                                                        <div class="media-body">
+                                                            <div class="lv-title">PANTA SALGUERO, Josué</div>
+                                                            <small class="lv-small">Tres</small>
+                                                        </div>
+                                                    </div>
+                                                </figure>
+
+                                                <div class="controls">
+                                                    <a href="#item-1" class="control-button">•</a>
+                                                    <a href="#item-2" class="control-button">•</a>
+                                                    <a href="#item-3" class="control-button">•</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-header ch-alt m-b-20">
+                                            <h2>Mensajes</h2>
+                                            <ul class="actions">
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-refresh-alt"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="card-body p-b-15">
+                                            <div class="listview">
+                                                <a class="lv-item" href="#">
+                                                    <div class="media">
+                                                        <div class="pull-left">
+                                                            <img class="lv-img-sm" src="img/profile-pics/2.jpg" alt="">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <div class="lv-title">PANTA SALGUERO, Josué</div>
+                                                            <small class="lv-small">a</small>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="lv-item" href="#">
+                                                    <div class="media">
+                                                        <div class="pull-left">
+                                                            <img class="lv-img-sm" src="img/profile-pics/2.jpg" alt="">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <div class="lv-title">PANTA SALGUERO, Josué</div>
+                                                            <small class="lv-small">RE: prueba de mensajes</small>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="lv-item" href="#">
+                                                    <div class="media">
+                                                        <div class="pull-left">
+                                                            <img class="lv-img-sm" src="img/admin-full.png" alt="">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <div class="lv-title">SIE*</div>
+                                                            <small class="lv-small">PRUEBA</small>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="lv-item" href="#">
+                                                    <div class="media">
+                                                        <div class="pull-left">
+                                                            <img class="lv-img-sm" src="img/profile-pics/1.jpg" alt="">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <div class="lv-title">FUENTES GARCIA, Rocio</div>
+                                                            <small class="lv-small">Ut vitae lacus sem ellentesque maximus, nunc sit amet varius dignissim, dui est consectetur neque</small>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="lv-item" href="#">
+                                                    <div class="media">
+                                                        <div class="pull-left">
+                                                            <img class="lv-img-sm" src="img/profile-pics/4.jpg" alt="">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <div class="lv-title">Bill Phillips</div>
+                                                            <small class="lv-small">Proin laoreet commodo eros id faucibus. Donec ligula quam, imperdiet vel ante placerat</small>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="lv-footer" href="#">Ver Todos</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div id="calendar-widget"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fixed-action-btn animated bounceInUp">
+                            <a class="btn btn-float circle" data-toggle="tooltip" data-placement="left" title="Accesos Directos">
+                                <i class="zmdi zmdi-adb"></i>
+                            </a>
+                            <ul>
+                                <li><a class="btn btn-float bgm-red" data-toggle="tooltip" data-placement="left" title="Mi Agenda"><i class="sie sieicon-organized"></i></a></li>
+                                <li><a class="btn btn-float bgm-yellow" data-toggle="tooltip" data-placement="left" title="Cronograma de Actividades" href="cronograma_actividades.html"><i class="sie sieicon-checkmark2"></i></a></li>
+                                <li><a class="btn btn-float bgm-green" data-toggle="tooltip" data-placement="left" title="Circulares"><i class="sie sieicon-search1"></i></a></li>
+                                <li><a class="btn btn-float bgm-blue" data-toggle="tooltip" data-placement="left" title="Comedor"><i class="zmdi zmdi-cutlery"></i></a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <aside id="chat">
+                        <ul class="tab-nav tn-justified" role="tablist">
+                            <li role="presentation" class="active"><a href="#friends" aria-controls="friends" role="tab" data-toggle="tab">Friends</a></li>
+                            <li role="presentation"><a href="#online" aria-controls="online" role="tab" data-toggle="tab">Online Now</a></li>
+                        </ul>
+
+                        <div class="chat-search">
+                            <div class="fg-line">
+                                <input type="text" class="form-control" placeholder="Search People">
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="friends">
+                                <div class="listview">
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left p-relative">
+                                                <img class="lv-img-sm" src="img/profile-pics/2.jpg" alt="">
+                                                <i class="chat-status-busy"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Jonathan Morris</div>
+                                                <small class="lv-small">Available</small>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/1.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">David Belle</div>
+                                                <small class="lv-small">Last seen 3 hours ago</small>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left p-relative">
+                                                <img class="lv-img-sm" src="img/profile-pics/3.jpg" alt="">
+                                                <i class="chat-status-online"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Fredric Mitchell Jr.</div>
+                                                <small class="lv-small">Availble</small>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left p-relative">
+                                                <img class="lv-img-sm" src="img/profile-pics/4.jpg" alt="">
+                                                <i class="chat-status-online"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Glenn Jecobs</div>
+                                                <small class="lv-small">Availble</small>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/5.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Bill Phillips</div>
+                                                <small class="lv-small">Last seen 3 days ago</small>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" src="img/profile-pics/6.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Wendy Mitchell</div>
+                                                <small class="lv-small">Last seen 2 minutes ago</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left p-relative">
+                                                <img class="lv-img-sm" src="img/profile-pics/7.jpg" alt="">
+                                                <i class="chat-status-busy"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Teena Bell Ann</div>
+                                                <small class="lv-small">Busy</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="online">
+                                <div class="listview">
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left p-relative">
+                                                <img class="lv-img-sm" src="img/profile-pics/2.jpg" alt="">
+                                                <i class="chat-status-busy"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Jonathan Morris</div>
+                                                <small class="lv-small">Available</small>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left p-relative">
+                                                <img class="lv-img-sm" src="img/profile-pics/3.jpg" alt="">
+                                                <i class="chat-status-online"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Fredric Mitchell Jr.</div>
+                                                <small class="lv-small">Availble</small>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left p-relative">
+                                                <img class="lv-img-sm" src="img/profile-pics/4.jpg" alt="">
+                                                <i class="chat-status-online"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Glenn Jecobs</div>
+                                                <small class="lv-small">Availble</small>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="lv-item" href="#">
+                                        <div class="media">
+                                            <div class="pull-left p-relative">
+                                                <img class="lv-img-sm" src="img/profile-pics/7.jpg" alt="">
+                                                <i class="chat-status-busy"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Teena Bell Ann</div>
+                                                <small class="lv-small">Busy</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </section>
+
+                <footer id="footer">
+                    Copyright 2015 SIEWEB - H&O System
+
+                    <ul class="f-menu">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Mi Agenda</a></li>
+                        <li><a href="cronograma_actividades.html">Cronograma de Actividades</a></li>
+                        <li><a href="#">Circulares</a></li>
+                        <li><a href="#">Comedor</a></li>
+                    </ul>
+                </footer>
+
+                <!-- Older IE warning message -->
+                <!--[if lt IE 9]>
+                    <div class="ie-warning">
+                        <h1 class="c-white">Warning!!</h1>
+                        <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+                        <div class="iew-container">
+                            <ul class="iew-download">
+                                <li>
+                                    <a href="http://www.google.com/chrome/">
+                                        <img src="img/browsers/chrome.png" alt="">
+                                        <div>Chrome</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.mozilla.org/en-US/firefox/new/">
+                                        <img src="img/browsers/firefox.png" alt="">
+                                        <div>Firefox</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.opera.com">
+                                        <img src="img/browsers/opera.png" alt="">
+                                        <div>Opera</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.apple.com/safari/">
+                                        <img src="img/browsers/safari.png" alt="">
+                                        <div>Safari</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                                        <img src="img/browsers/ie.png" alt="">
+                                        <div>IE (New)</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>Sorry for the inconvenience!</p>
+                    </div>   
+                <![endif]-->
+
+                <script type="text/javascript" src="js/please-wait.min.js"></script>
+                <script type="text/javascript">
+                    carga = window.pleaseWait({
+                        logo: "img/escudo.png",
+                        backgroundColor: '#073F6D',
+                        loadingHtml: /*"<div class='sk-spinner sk-spinner-three-bounce'>"+
+                         "<div class='sk-child sk-bounce1'></div>"+
+                         "<div class='sk-child sk-bounce2'></div>"+
+                         "<div class='sk-child sk-bounce3'></div>"+
+                         "</div>"*/
+                                "<div class='mixin-text'></div>"
+                    });
+                </script>
+                <!-- Javascript Libraries -->
+                <script src="js/jquery.min.js"></script>
+                <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+                <script src="vendors/bower_components/flot/jquery.flot.js"></script>
+                <script src="vendors/bower_components/flot/jquery.flot.resize.js"></script>
+                <script src="vendors/bower_components/flot.curvedlines/curvedLines.js"></script>
+                <script src="vendors/sparklines/jquery.sparkline.min.js"></script>
+                <script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+                <script src="vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+                <script src="vendors/bower_components/moment/min/moment.min.js"></script>
+                <script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+                <!--<script src="vendors/bower_components/jquery.nicescroll/jquery.nicescroll.min.js"></script>-->
+                <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+                <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+                <script src="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
+
+                <!-- Placeholder for IE9 -->
+                <!--[if IE 9 ]>
+                    <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+                <![endif]-->
+
+                <script src="js/flot-charts/curved-line-chart.js"></script>
+                <script src="js/flot-charts/line-chart.js"></script>
+                <script src="js/charts.js"></script>
+                <script src="js/unslider.min.js"></script>
+                <script src="js/highcharts.src.js"></script>
+                <script src="js/exporting.src.js"></script>
+                <script src="js/jquery.i18n.js"></script>
+                <script src="js/jquery.i18n.messagestore.js"></script>
+                <script src="js/jquery.i18n.fallbacks.js"></script>
+                <script src="js/idiomas.js"></script>
+                <script src="js/crear.js"></script>
+                <script src="js/functions.js"></script>
+                </body>
+                </html>

@@ -1,0 +1,37 @@
+.sieslider .control-button {
+  color: #ccc;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.sieslider .control-button:hover {
+  color: white;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*
+	Theme controls how everything looks in Gallery CSS.
+*/
+.sieslider {
+  position: relative;
+}
+.sieslider .item {
+  height: 400px;
+  overflow: hidden;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+.sieslider .controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.sieslider .control-button {
+  display: inline-block;
+  margin: 0 .02em;
+  font-size: 3em;
+  text-align: center;
+  text-decoration: none;
+  transition: color .1s;
+}
