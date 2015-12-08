@@ -93,45 +93,45 @@
 
     </body>
     <script>
-        $.validator.setDefaults({
-            submitHandler: function () {
-                alert("submitted!");
-                $("#datosCliente").submit();
-            }
-        });
-
-        $.validator.addMethod("contra", function (value) {
-            return $("#pass").val() === value;
-        }, 'Las contraseñas deben ser iguales');
-        $().ready(function () {
-            // Vlidamos los datos del cliente
-            $("#datosCliente").validate({
-                rules: {
-                    nombre: "required",
-                    apellido: "required",
-                    telefono: {required: true,
-                        minlength: 9,
-                        maxlength: 9,
-                        number: true},
-                    email: "required",
-                    fax: "required",
-                    direccion1: "required",
-                    ciudad: "required",
-                    pass: "required",
-                    pass2: "contra",
-                },
-                messages: {
-                    nombre: "Ingrese un nombre",
-                    apellido: "Ingrese un apellido",
-                    telefono: "Ingrese un telefono de contacto",
-                    email: "ingrese un email valido",
-                    fax: "Ingrese un fax",
-                    direccion1: "Ingrese una dirección",
-                    ciudad: "Ingrese una ciudad ",
-                    pass: "ingrese una contraseña",
-                }
-            });
-        });
+//        $.validator.setDefaults({
+//            submitHandler: function () {
+//                alert("submitted!");
+//                $("#datosCliente").submit();
+//            }
+//        });
+//
+//        $.validator.addMethod("contra", function (value) {
+//            return $("#pass").val() === value;
+//        }, 'Las contraseñas deben ser iguales');
+//        $().ready(function () {
+//            // Vlidamos los datos del cliente
+//            $("#datosCliente").validate({
+//                rules: {
+//                    nombre: "required",
+//                    apellido: "required",
+//                    telefono: {required: true,
+//                        minlength: 9,
+//                        maxlength: 9,
+//                        number: true},
+//                    email: "required",
+//                    fax: "required",
+//                    direccion1: "required",
+//                    ciudad: "required",
+//                    pass: "required",
+//                    pass2: "contra",
+//                },
+//                messages: {
+//                    nombre: "Ingrese un nombre",
+//                    apellido: "Ingrese un apellido",
+//                    telefono: "Ingrese un telefono de contacto",
+//                    email: "ingrese un email valido",
+//                    fax: "Ingrese un fax",
+//                    direccion1: "Ingrese una dirección",
+//                    ciudad: "Ingrese una ciudad ",
+//                    pass: "ingrese una contraseña",
+//                }
+//            });
+//        });
 
     </script>
 </html>

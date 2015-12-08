@@ -4,29 +4,27 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 class G_GestionarUsuario extends MX_Controller {
+
     public function __construct() {
         $this->load->model("E_sexo");
         parent::__construct();
     }
-    
+
+//http://192.168.1.2/patron/index.php/pedidos/g_gestionarusuario/    
     public function index() {
-        $data = $this->E_sexo->listar();
-        var_dump($data);//prueba de git
-        exit;
+        $data["sexo"] = $this->E_sexo->listar();
         $this->load->library('session');
         $this->session->set_userdata("nombre", "xxxxxxxxxxxx");
         $this->session->set_userdata("apellido", "y");
-        $this->load->view('f_modificarcliente');
+        $this->load->view('f_modificarcliente',$data);
     }
-    public function guardarCliente(){        
-        var_dump($this->E_sexo->listar());exit;
-        
-        $something = $this->input->post('nombre');
-        
-        var_dump($something);//continuen
-        
+
+//http://192.168.1.2/patron/index.php/pedidos/g_gestionarusuario/
+    public function guardarCliente() {
+        $post = $this->input->post();
+        var_dump($post["nombre"]);exit;
         //($_POST["edad"]);
         //($_POST["telefono"]);
-        
     }
+
 }
