@@ -21,9 +21,9 @@ class G_GestionarUsuario extends MX_Controller {
 
 //http://192.168.1.2/patron/index.php/pedidos/g_gestionarusuario/
     public function guardarCliente() {
-        $post = $this->input->post();
+        $post = $this->input->post();//cuando modificas una linea se 
         var_dump($post["nombre"]);exit;
-        //($_POST["edad"]);
+       // cuando agregas una linea se pone un icono verde a la izquierda
         //($_POST["telefono"]);
     }
 
