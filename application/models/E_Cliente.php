@@ -5,35 +5,17 @@ class E_Cliente extends CI_Model {
     public $idProv;
     public $idDist;
 
-    public function guardarCliente(array $data){
-        var_dump($this->input->post('submit'));
+    public function guardar(array $data) {//
+        $query = $this->db->query("CALL IngresarClientes({$data["nombre"]},"
+        . "{$data["nombre"]},"
+        . "{$data["apellido"]},"
+        . "{$data["xxxxxx"]},"
+        . "{$data["edad"]},"
+        . "{$data["sex"]},"
+        . "{$data["nombre"]},"
+        . "{$data["nombre"]},)");
+        $data = $query->result_array();
+        $query->free_result();
+        return $data;
     }
-    
-    public function listarDepartamentos() {
-        
-        $query = $this->db->query($sql);
-        return $query->result_array();
-    }
-
-    public function listarProvincias($provincia) {
-        $sql = "SELECT idProv, provincia FROM ubprovincia Where idDep=$provincia";
-        $query = $this->db->query($sql);
-        return $query->result_array();
-    }
-
-    public function listarDistritos() {
-        $sql = "SELECT idDist, distrito FROM ubdistrito Where idProv=$this->idProv";
-        $query = $this->db->query($sql);
-        return $query->result_array();
-    }
-
-    public function localidades($provincia) {
-        $this->db->where('idprovincia', $provincia);
-        $this->db->order_by('poblacion', 'asc');
-        $localidades = $this->db->get('poblacion');
-        if ($localidades->num_rows() > 0) {
-            return $localidades->result();
-        }
-    }
-
 }

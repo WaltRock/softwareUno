@@ -46,10 +46,10 @@
                                 <h2>Datos Personales<small>Informacion basica de la persona</small></h2>
                             </div>
                             <div class="card-body card-padding">
-                                <?php echo inputHtml5(array('id' => 'nombre', 'ph' => 'Nombre')); ?>
-                                <?php echo inputHtml5(array('id' => 'apellido', 'ph' => 'Apellido')); ?>                                
-                                <?php echo inputHtml5(array('id' => 'telefono', 'ph' => 'Telefono')); ?>
-                                <?php echo comboPedidos(array('des' => 'Genero'), array('Masculino', 'Femenino')); ?>
+                                <?php echo inputHtml5(array('id' => 'Nombre', 'ph' => 'Nombre')); ?>
+                                <?php echo inputHtml5(array('id' => 'Apellido', 'ph' => 'Apellido')); ?>                                
+                                <?php echo inputHtml5(array('id' => 'Telefono', 'ph' => 'Telefono')); ?>
+                                <?php echo comboPedidos(array('des' => 'Genero','id'=>'CodSexo'), $sexo); ?>
                                 <?php echo inputHtml5(array('id' => 'email', 'ph' => 'E-Mail')); ?>
                                 <?php echo inputHtml5(array('id' => 'fax', 'ph' => 'Fax')); ?>
                             </div>
@@ -62,7 +62,7 @@
                                 <?php echo inputHtml5(array('id' => 'empresa', 'ph' => 'Empresa')); ?>
                                 <?php echo inputHtml5(array('id' => 'direccion1', 'ph' => 'Dirección 1')); ?>
                                 <?php echo inputHtml5(array('id' => 'direccion2', 'ph' => 'Dirección 2')); ?>
-                                <?php echo inputHtml5(array('id' => 'ciudad', 'ph' => 'Ciudad')); ?>                            
+                                <?php echo comboPedidos(array('des' => 'Ciudad' ,'id'=>'idCiudades'), $paises); ?>
                                 <?php echo inputHtml5(array('id' => 'cpostal', 'ph' => 'Codigo Postal')); ?>
                                 <?php echo inputHtml5(array('id' => 'pass', 'ph' => 'Contraseña')); ?>
                                 <?php echo inputHtml5(array('id' => 'pass2', 'ph' => 'Confirmar')); ?>

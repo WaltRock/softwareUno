@@ -235,13 +235,20 @@ function sidebarPedidos() {
         </aside>';
 }
 
-function comboPedidos(array $data, array $options) {
+function comboPedidos(array $data, array $options,$selected='') {
     $opt = '';
-    foreach ($options  as $key=>$val) {
-        $opt.='<option value="'.$key.'">' . $val . '</option>';
+    foreach ($options as $key => $val) {
+        $opt.='<option '.($selected==$key?" Selected ":"").' value="' . $key . '">' . $val . '</option>';
     }//col-sm-3 m-b-25 esa seria la combinacion pero me da flojera continuen ustedes ya tengo sueño
     return '<div class="m-b-25">
            <p class="f-500 m-b-15 c-black">' . $data["des"] . '</p>
-           <select class="selectpicker">' . $opt . '</select>
+           <select id="'.$data["id"].'" name="'.$data["id"].'" class="selectpicker">' . $opt . '</select>
            </div>';
+}
+
+function DatosOptions(array &$data, $llave, $campo) {
+    foreach ($data as $key => $valor) {
+        $newData[$data[$key][$llave]] = $valor[$campo];
+    }
+    $data = $newData;
 }

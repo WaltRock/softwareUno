@@ -2,12 +2,12 @@
 
 class E_Sexo extends CI_Model {
 
-    public function data(){
-        return 'Data';
-    }
-    
     public function listar() {
-        $query = $this->db->query("CALL SP_ListarSexo()");                
-        return $query->result_array();
+        $query = $this->db->query("CALL SP_ListarSexo()");
+        $data = $query->result_array();
+        $query->next_result(); // Carga todo
+        $query->free_result(); // Libera 
+        return $data; // Retorna los datos
     }
+
 }
