@@ -49,7 +49,7 @@
                                 <?php echo inputHtml5(array('id' => 'Nombre', 'ph' => 'Nombre')); ?>
                                 <?php echo inputHtml5(array('id' => 'Apellido', 'ph' => 'Apellido')); ?>                                
                                 <?php echo inputHtml5(array('id' => 'Telefono', 'ph' => 'Telefono')); ?>
-                                <?php echo comboPedidos(array('des' => 'Genero','id'=>'CodSexo'), $sexo); ?>
+                                <?php echo comboPedidos(array('des' => 'Genero', 'id' => 'CodSexo'), $sexo); ?>
                                 <?php echo inputHtml5(array('id' => 'email', 'ph' => 'E-Mail')); ?>
                                 <?php echo inputHtml5(array('id' => 'fax', 'ph' => 'Fax')); ?>
                             </div>
@@ -62,7 +62,10 @@
                                 <?php echo inputHtml5(array('id' => 'empresa', 'ph' => 'Empresa')); ?>
                                 <?php echo inputHtml5(array('id' => 'direccion1', 'ph' => 'Dirección 1')); ?>
                                 <?php echo inputHtml5(array('id' => 'direccion2', 'ph' => 'Dirección 2')); ?>
-                                <?php echo comboPedidos(array('des' => 'Ciudad' ,'id'=>'idCiudades'), $paises); ?>
+                                <?php echo comboPedidos(array('des' => 'Pais', 'id' => 'idCiudades'), $paises); ?>
+                                <div id="comboPais">
+                                <?php echo comboPedidos(array('des' => 'Ciudad', 'id' => 'Paises_Codigo'), array('')); ?>
+                                </div>
                                 <?php echo inputHtml5(array('id' => 'cpostal', 'ph' => 'Codigo Postal')); ?>
                                 <?php echo inputHtml5(array('id' => 'pass', 'ph' => 'Contraseña')); ?>
                                 <?php echo inputHtml5(array('id' => 'pass2', 'ph' => 'Confirmar')); ?>
@@ -93,6 +96,17 @@
 
     </body>
     <script>
+        $("#idCiudades").change(function () {
+            var pais = $("#idCiudades").val();
+            $.ajax({data: {pais: pais},
+                type: 'POST',
+                url: "http://" + window.location.host + "/patron/index.php/pedidos/g_gestionarusuario/getCiudad",
+                success: function (result) {
+                    $("#comboPais").html(result);
+                    console.log(result);
+                }});
+        });
+
 //        $.validator.setDefaults({
 //            submitHandler: function () {
 //                alert("submitted!");

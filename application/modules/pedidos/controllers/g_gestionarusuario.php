@@ -34,8 +34,11 @@ class G_GestionarUsuario extends MX_Controller {
         //($_POST["telefono"]);
     }
     public function getCiudad(){
-        
-        $data["paises"]=$this->E_ubigeo->ListarPaises();
+        $post = $this->input->post();
+        $ciudad=$this->E_Ubigeo->listarCiudades($post["pais"]);
+        //var_dump($ciudad);exit;
+        DatosOptions($ciudad, "idCiudades", "Ciudades");
+        echo comboPedidos(array('des' => 'Ciudad', 'id' => 'Paises_Codigo'), $ciudad);
     }
 
 }
