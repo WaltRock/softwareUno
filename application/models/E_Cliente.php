@@ -1,21 +1,24 @@
 <?php
 class E_Cliente extends CI_Model {
 
-    public $idDep;
-    public $idProv;
-    public $idDist;
-
     public function guardar(array $data) {//
-        $query = $this->db->query("CALL IngresarClientes({$data["nombre"]},"
-        . "{$data["nombre"]},"
-        . "{$data["apellido"]},"
-        . "{$data["xxxxxx"]},"
-        . "{$data["edad"]},"
-        . "{$data["sex"]},"
-        . "{$data["nombre"]},"
-        . "{$data["nombre"]},)");
+        $query = $this->db->query("CALL IngresarClientes("
+                . "'{$data["Nombre"]}',"
+                . "'{$data["Apellido"]}',"
+                . "'{$data["TipCliente"]}',"
+                . "'{$data["Telefono"]}',"
+                . "'{$data["Fax"]}',"
+                . "'{$data["CodSexo"]}',"
+                . "'{$data["Direccion1"]}',"
+                . "'{$data["Direccion2"]}',"
+                . "'{$data["IdCiudades"]}',"
+                . "'{$data["Paises_Codigo"]}',"                
+                . "'{$data["Codpostal"]}',"
+                . "'{$data["Email"]}',"
+                . "'{$data["Empresa"]}')");
         $data = $query->result_array();
         $query->free_result();
         return $data;
     }
+
 }

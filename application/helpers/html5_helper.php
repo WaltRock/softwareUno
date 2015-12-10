@@ -242,7 +242,7 @@ function comboPedidos(array $data, array $options,$selected='') {
     }//col-sm-3 m-b-25 esa seria la combinacion pero me da flojera continuen ustedes ya tengo sueño
     return '<div class="m-b-25">
            <p class="f-500 m-b-15 c-black">' . $data["des"] . '</p>
-           <select id="'.$data["id"].'" name="'.$data["id"].'" class="selectpicker">' . $opt . '</select>
+           <select data-live-search="true" id="'.$data["id"].'" name="'.$data["id"].'" class="selectpicker">' . $opt . '</select>
            </div>';
 }
 
