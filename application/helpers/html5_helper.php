@@ -58,7 +58,7 @@ if (!function_exists('navVentas')) {
                     <a href="?route=account/account" title="Mi cuenta" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md">Mi cuenta</span> <span class="caret"></span></a>
                     <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="http://192.168.1.2/patron/index.php/pedidos/g_gestionarusuario/">Registrar</a></li>
+                        <li><a href="' . base_url() . 'index.php/pedidos/g_gestionarusuario/">Registrar</a></li>
                         <li><a href="">Iniciar Sesion</a></li>
                     </ul>
                 </li>
@@ -128,6 +128,7 @@ if (!function_exists('menuVentas')) {
 if (!function_exists('inputHtml5')) {
 
     function inputHtml5(array $data) {
+        $classForm = "";
         if (empty($data["type"])) {
             $data["type"] = 'text';
         }
@@ -140,11 +141,22 @@ if (!function_exists('inputHtml5')) {
         if (empty($data["ph"])) {
             $data["ph"] = '';
         }
-        return '<div class="form-group fg-float  has-feedback">
+        if (empty($data["class"])) {
+            $data["class"] = 'col-sm-12';
+        }
+        if (!empty($data["dm"])) {
+            $data["dm"] = 'data-mask="' . $data["dm"] . '"';
+            $classForm.=" input-mask";
+        } else {
+            $data["dm"] = "";
+        }
+        return '<div class="' . $data["class"] . '"> 
+            <div class="form-group fg-float  has-feedback">
                     <div class="fg-line">
-                        <input name="' . $data["name"] . '" id="' . $data["id"] . '" type="' . $data["type"] . '" class="form-control">
+                        <input autocomplete="off" ' . $data["dm"] . '  name="' . $data["name"] . '" id="' . $data["id"] . '" type="' . $data["type"] . '" class="form-control ' . $classForm . '">
                     </div>
                     <label class="fg-label">' . $data["ph"] . '</label>
+                </div> 
                 </div>';
     }
 
@@ -164,7 +176,7 @@ function headerPedidos() {
     <link href="' . base_url() . 'assets/vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet">
     <link href="' . base_url() . 'assets/vendors/farbtastic/farbtastic.css" rel="stylesheet">
     <link href="' . base_url() . 'assets/vendors/bower_components/summernote/dist/summernote.css" rel="stylesheet">
-        
+    
     <link href="' . base_url() . 'assets/css/app.min.2.css" rel="stylesheet">
 </head>';
 }
@@ -180,7 +192,7 @@ function scritpsPedidos() {
     <script src="' . base_url() . 'assets/vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
     <script src="' . base_url() . 'assets/vendors/bower_components/autosize/dist/autosize.min.js"></script>
     <script src="' . base_url() . 'assets/vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
-
+    <script src="' . base_url() . 'assets/vendors/input-mask/input-mask.min.js"></script>
     <!-- Placeholder for IE9 -->
     <!--[if IE 9 ]>
         <script src="' . base_url() . 'assets/vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
@@ -235,14 +247,17 @@ function sidebarPedidos() {
         </aside>';
 }
 
-function comboPedidos(array $data, array $options,$selected='') {
+function comboPedidos(array $data, array $options, $selected = '') {
     $opt = '';
     foreach ($options as $key => $val) {
-        $opt.='<option '.($selected==$key?" Selected ":"").' value="' . $key . '">' . $val . '</option>';
+        $opt.='<option ' . ($selected == $key ? " Selected " : "") . ' value="' . $key . '">' . $val . '</option>';
     }//col-sm-3 m-b-25 esa seria la combinacion pero me da flojera continuen ustedes ya tengo sueño
-    return '<div class="m-b-25">
+    if (empty($data["class"])) {
+        $data["class"] = '';
+    }
+    return '<div class="m-b-25 ' . $data["class"] . '">
            <p class="f-500 m-b-15 c-black">' . $data["des"] . '</p>
-           <select data-live-search="true" id="'.$data["id"].'" name="'.$data["id"].'" class="selectpicker">' . $opt . '</select>
+           <select data-live-search="true" id="' . $data["id"] . '" name="' . $data["id"] . '" class="selectpicker">' . $opt . '</select>
            </div>';
 }
 

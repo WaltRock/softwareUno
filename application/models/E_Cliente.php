@@ -15,6 +15,7 @@ class E_Cliente extends CI_Model {
                 . "'{$data["Paises_Codigo"]}',"                
                 . "'{$data["Codpostal"]}',"
                 . "'{$data["Email"]}',"
+                . "'{$data["Dni"]}',"                    
                 . "'{$data["Empresa"]}')");
         $data = $query->result_array();
         $query->free_result();
